@@ -1,4 +1,4 @@
 {
-    "diffEditor.wordWrap": "on",
+    "editor.wordWrap": "on",
     "python.analysis.typeCheckingMode": "off"
 }
