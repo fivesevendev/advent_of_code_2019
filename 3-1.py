@@ -12,7 +12,7 @@ dataTwo = ["L1002","D658","L695","U170","L117","U93","R700","D960","L631","U483"
 
 def numFind(n):
     intersect = []
-    taxi = 10 ** 6
+    taxi = 10 ** 9
     lfOne = lineFind(n[0])
     lfTwo = lineFind(n[1])
     for t in lfOne:
@@ -24,7 +24,7 @@ def numFind(n):
     return taxi
 
 def lineFind(d):
-    line = []
+    line = {}
     x, y = 0, 0
     for a in d:
         count = 0
@@ -33,22 +33,22 @@ def lineFind(d):
             while count < dist:
                 count += 1
                 x += 1
-                line.append((x, y))
+                line[(x, y)] = None
         elif a[0] == "L":
             while count < dist:
                 count += 1
                 x -= 1
-                line.append((x, y))
+                line[(x, y)] = None
         elif a[0] == "U":
             while count < dist:
                 count += 1
                 y += 1
-                line.append((x, y))
+                line[(x, y)] = None
         elif a[0] == "D":
             while count < dist:
                 count += 1
                 y -= 1
-                line.append((x, y))
+                line[(x, y)] = None
     return line
 
 
