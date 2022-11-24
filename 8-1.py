@@ -20,6 +20,7 @@ def numFind(n):
             leastLayerCount = imageLayers[i].count("0")
     return imageLayers[leastLayer].count("1") * imageLayers[leastLayer].count("2")
 
+
 if __name__ == '__main__':
     startTime = timeit.default_timer()
     print(">>>>>", time.asctime(), "<<<<<\n")
